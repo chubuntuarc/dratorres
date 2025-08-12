@@ -1,98 +1,11 @@
-import { useState } from 'react'
+import { Header, Hero } from './components';
 
 function App() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-    }
-    setIsMenuOpen(false)
-  }
-
   return (
     <div className="min-h-screen bg-white">
-      {/* Header */}
-      <header className="bg-dental-blue text-white">
-        <nav className="container-custom section-padding">
-          <div className="flex items-center justify-between">
-            {/* Logo */}
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 border-2 border-white rounded-full flex items-center justify-center">
-                <div className="w-4 h-4 bg-white rounded-full"></div>
-              </div>
-              <div>
-                <h1 className="text-xl font-bold">Dra. Patricia Torres</h1>
-                <p className="text-sm text-blue-200">Cirujano Dentista</p>
-              </div>
-            </div>
-
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-8">
-              <button onClick={() => scrollToSection('sobre-mi')} className="hover:text-blue-200 transition-colors">
-                Sobre mi
-              </button>
-              <button onClick={() => scrollToSection('servicios')} className="hover:text-blue-200 transition-colors">
-                Servicios
-              </button>
-              <button onClick={() => scrollToSection('contacto')} className="hover:text-blue-200 transition-colors">
-                Contacto
-              </button>
-            </div>
-
-            {/* Mobile Menu Button */}
-            <button 
-              className="md:hidden"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
-          </div>
-
-          {/* Mobile Menu */}
-          {isMenuOpen && (
-            <div className="md:hidden mt-4 pb-4 border-t border-blue-700">
-              <div className="flex flex-col space-y-4 pt-4">
-                <button onClick={() => scrollToSection('sobre-mi')} className="hover:text-blue-200 transition-colors">
-                  Sobre mi
-                </button>
-                <button onClick={() => scrollToSection('servicios')} className="hover:text-blue-200 transition-colors">
-                  Servicios
-                </button>
-                <button onClick={() => scrollToSection('contacto')} className="hover:text-blue-200 transition-colors">
-                  Contacto
-                </button>
-              </div>
-            </div>
-          )}
-        </nav>
-
-        {/* Hero Section */}
-        <div className="container-custom section-padding">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <h2 className="text-4xl lg:text-6xl font-bold">Dra. Patricia Torres</h2>
-              <h3 className="text-2xl lg:text-3xl text-blue-200">Cirujano Dentista</h3>
-              <p className="text-lg text-blue-100">Transformando sonrisas, compartiendo alegría.</p>
-              <button className="btn-secondary text-dental-blue">
-                Agendar Cita
-              </button>
-            </div>
-            <div className="flex justify-center lg:justify-end">
-              <div className="w-80 h-80 bg-gradient-to-br from-blue-300 to-purple-300 rounded-full flex items-center justify-center">
-                <div className="text-center text-white">
-                  <div className="text-6xl mb-2">🦷</div>
-                  <p className="text-sm">Imagen del dentista</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
-
+      <Header />
+      <Hero />
+      
       {/* Services Section */}
       <section id="servicios" className="bg-dental-purple section-padding">
         <div className="container-custom text-center">
@@ -261,7 +174,7 @@ function App() {
         </div>
       </footer>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
