@@ -17,7 +17,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <div className="w-42 h-16 flex items-center justify-center">
+            <div className="w-32 h-16 flex items-center justify-center">
               <img 
                 src="/images/logo-dentista-torres.png" 
                 alt="Logo Dra. Patricia Torres - Cirujano Dentista"

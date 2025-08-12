@@ -1,4 +1,4 @@
-import { Header, Hero } from './components';
+import { Header, Hero, About } from './components';
 
 function App() {
   return (
@@ -8,110 +8,87 @@ function App() {
       
       {/* Services Section */}
       <section id="servicios" className="bg-dental-purple section-padding">
-        <div className="container-custom text-center">
-          <div className="mb-12">
-            <p className="text-lg text-gray-600">Celebrando</p>
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-800">40 Años de Servicio</h2>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              {
-                number: "01",
-                title: "Precise laser treatment",
-                description: "Best suited and prescribed for decay treatment and last few era"
-              },
-              {
-                number: "02",
-                title: "Tooth pulled extraction",
-                description: "Painless extractions are almost always to prevent further pain."
-              },
-              {
-                number: "03",
-                title: "Maxillofacial surgery",
-                description: "Treated in such a way that limits the spread of drastic periodontal disease"
-              },
-              {
-                number: "04",
-                title: "Bridges and implants",
-                description: "Best suited and prescribed for decay treatment and lost few era."
-              }
-            ].map((service, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-                <div className="w-8 h-8 bg-dental-purple rounded-full flex items-center justify-center text-sm font-semibold text-gray-600 mb-4 mx-auto">
-                  {service.number}
-                </div>
-                <h3 className="text-lg font-semibold text-gray-800 mb-3">{service.title}</h3>
-                <p className="text-gray-600 text-sm">{service.description}</p>
+        <div className="container-custom">
+          <h2 className="text-4xl lg:text-5xl font-bold text-center text-gray-800 mb-12">Servicios</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white p-6 rounded-2xl shadow-lg text-center">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-3xl">🦷</span>
               </div>
-            ))}
+              <h3 className="text-xl font-semibold text-gray-800 mb-3">Odontología General</h3>
+              <p className="text-gray-600">Cuidado dental integral para toda la familia</p>
+            </div>
+            <div className="bg-white p-6 rounded-2xl shadow-lg text-center">
+              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-3xl">✨</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-800 mb-3">Estética Dental</h3>
+              <p className="text-gray-600">Transforma tu sonrisa con tratamientos modernos</p>
+            </div>
+            <div className="bg-white p-6 rounded-2xl shadow-lg text-center">
+              <div className="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-3xl">🦷</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-800 mb-3">Ortodoncia</h3>
+              <p className="text-gray-600">Alinea tus dientes de forma profesional</p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* About Me Section */}
-      <section id="sobre-mi" className="bg-white section-padding">
-        <div className="container-custom">
-          <h2 className="text-4xl lg:text-5xl font-bold text-center text-gray-800 mb-12">Sobre Mí</h2>
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-4">
-              <p className="text-gray-600">Lorem ipsum texto de ejemplo aqui solamente. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <p className="text-gray-600">Lorem ipsum texto de ejemplo aqui solamente. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-              <p className="text-gray-600">Lorem ipsum texto de ejemplo aqui solamente. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-            </div>
-            <div className="flex justify-center lg:justify-end">
-              <div className="w-80 h-80 bg-gradient-to-br from-purple-300 to-pink-300 rounded-full flex items-center justify-center">
-                <div className="text-center text-white">
-                  <div className="text-6xl mb-2">👩‍⚕️</div>
-                  <p className="text-sm">Dra. Patricia Torres</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <About 
+        title="Sobre Mí"
+        description={[
+          "Lorem ipsum texto de ejemplo aqui solamente. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "Lorem ipsum texto de ejemplo aqui solamente. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "Lorem ipsum texto de ejemplo aqui solamente. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        ]}
+        imageSrc="/images/dentista.png"
+        imageAlt="Dra. Patricia Torres - Cirujano Dentista"
+        imagePosition="right"
+        backgroundColor="bg-white"
+      />
 
       {/* Community Service Section */}
-      <section className="bg-white section-padding">
-        <div className="container-custom">
-          <h2 className="text-4xl lg:text-5xl font-bold text-center text-gray-800 mb-12">Servicio a la Comunidad</h2>
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="flex justify-center lg:justify-start">
-              <div className="w-80 h-80 bg-gradient-to-br from-blue-300 to-green-300 rounded-full flex items-center justify-center">
-                <div className="text-center text-white">
-                  <div className="text-6xl mb-2">🏥</div>
-                  <p className="text-sm">Servicio comunitario</p>
-                </div>
-              </div>
-            </div>
-            <div className="space-y-4">
-              <p className="text-gray-600">Lorem ipsum texto de ejemplo aqui solamente. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <p className="text-gray-600">Lorem ipsum texto de ejemplo aqui solamente. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-              <p className="text-gray-600">Lorem ipsum texto de ejemplo aqui solamente. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <About 
+        title="Servicio a la Comunidad"
+        description={[
+          "Lorem ipsum texto de ejemplo aqui solamente. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "Lorem ipsum texto de ejemplo aqui solamente. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "Lorem ipsum texto de ejemplo aqui solamente. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        ]}
+        imageSrc="/images/comunidad.png"
+        imageAlt="Servicio a la comunidad dental"
+        imagePosition="left"
+        backgroundColor="bg-white"
+      />
 
       {/* Additional Content Section */}
       <section className="bg-dental-purple section-padding">
         <div className="container-custom">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <div className="bg-white rounded-xl p-6 shadow-lg">
-                <p className="text-gray-600">Lorem ipsum texto de ejemplo aqui solamente. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <h2 className="text-4xl lg:text-5xl font-bold text-center text-gray-800 mb-12">Por Qué Elegirnos</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                <span className="text-4xl">🌟</span>
               </div>
-              <div className="bg-white rounded-xl p-6 shadow-lg">
-                <p className="text-gray-600">Lorem ipsum texto de ejemplo aqui solamente. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-              </div>
+              <h3 className="text-xl font-semibold text-gray-800 mb-3">Experiencia</h3>
+              <p className="text-gray-600">Más de 15 años de experiencia en odontología</p>
             </div>
-            <div className="flex justify-center lg:justify-end">
-              <div className="w-80 h-80 bg-gradient-to-br from-yellow-300 to-orange-300 rounded-full flex items-center justify-center">
-                <div className="text-center text-white">
-                  <div className="text-6xl mb-2">👶</div>
-                  <p className="text-sm">Atención pediátrica</p>
-                </div>
+            <div className="text-center">
+              <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                <span className="text-4xl">💙</span>
               </div>
+              <h3 className="text-xl font-semibold text-gray-800 mb-3">Compromiso</h3>
+              <p className="text-gray-600">Comprometidos con la salud dental de nuestra comunidad</p>
+            </div>
+            <div className="text-center">
+              <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                <span className="text-4xl">🔬</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-800 mb-3">Tecnología</h3>
+              <p className="text-gray-600">Equipamiento moderno y técnicas avanzadas</p>
             </div>
           </div>
         </div>
@@ -120,34 +97,36 @@ function App() {
       {/* Contact Section */}
       <section id="contacto" className="bg-dental-purple section-padding">
         <div className="container-custom">
-          <div className="grid lg:grid-cols-2 gap-12">
-            <div className="space-y-6">
-              <h3 className="text-2xl font-bold text-gray-800 mb-6">Información de Contacto</h3>
-              
-              <div className="space-y-4">
+          <h2 className="text-4xl lg:text-5xl font-bold text-center text-gray-800 mb-12">Contacto</h2>
+          <div className="max-w-2xl mx-auto">
+            <div className="bg-white p-8 rounded-2xl shadow-lg">
+              <div className="grid md:grid-cols-2 gap-8">
                 <div>
-                  <h4 className="font-semibold text-gray-800 mb-2">Dirección</h4>
-                  <p className="text-gray-600">Blvd. Agua Caliente 11300-227, Plaza Campestre<br />Colonia Aviación, Tijuana, B.C.N, Mexico 22014</p>
+                  <h3 className="text-2xl font-semibold text-gray-800 mb-4">Información de Contacto</h3>
+                  <div className="space-y-3">
+                    <div className="flex items-center space-x-3">
+                      <span className="text-2xl">📍</span>
+                      <span className="text-gray-600">Av. Principal 123, Ciudad</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <span className="text-2xl">📞</span>
+                      <span className="text-gray-600">+1 234 567 8900</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <span className="text-2xl">✉️</span>
+                      <span className="text-gray-600">info@drapatriciatorres.com</span>
+                    </div>
+                  </div>
                 </div>
-                
                 <div>
-                  <h4 className="font-semibold text-gray-800 mb-2">Teléfonos</h4>
-                  <p className="text-gray-600">USA +1 (619) 713 7193</p>
-                  <p className="text-gray-600">México +52 (664) 290 1000</p>
+                  <h3 className="text-2xl font-semibold text-gray-800 mb-4">Horarios</h3>
+                  <div className="space-y-2 text-gray-600">
+                    <p><strong>Lunes - Viernes:</strong> 9:00 AM - 6:00 PM</p>
+                    <p><strong>Sábados:</strong> 9:00 AM - 2:00 PM</p>
+                    <p><strong>Domingos:</strong> Cerrado</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            
-            <div className="relative">
-              <div className="w-full h-80 bg-gradient-to-br from-gray-300 to-gray-400 rounded-lg flex items-center justify-center">
-                <div className="text-center text-gray-600">
-                  <div className="text-4xl mb-2">🗺️</div>
-                  <p>Mapa de Google Maps</p>
-                </div>
-              </div>
-              <button className="absolute bottom-4 right-4 btn-primary">
-                Agendar Cita
-              </button>
             </div>
           </div>
         </div>
@@ -156,19 +135,22 @@ function App() {
       {/* Footer */}
       <footer className="bg-dental-blue text-white section-padding">
         <div className="container-custom">
-          <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="flex items-center space-x-2 mb-4 md:mb-0">
-              <div className="w-8 h-8 border-2 border-white rounded-full flex items-center justify-center">
-                <div className="w-4 h-4 bg-white rounded-full"></div>
-              </div>
-              <div>
-                <h3 className="text-lg font-bold">Dra. Patricia Torres</h3>
-                <p className="text-sm text-blue-200">Cirujano Dentista</p>
-              </div>
+          <div className="text-center">
+            <h3 className="text-2xl font-bold mb-4">Dra. Patricia Torres</h3>
+            <p className="text-dental-subtitle mb-6">Transformando sonrisas, compartiendo alegría</p>
+            <div className="flex justify-center space-x-6">
+              <a href="#" className="text-dental-title hover:text-white transition-colors duration-200">
+                <span className="text-2xl">📱</span>
+              </a>
+              <a href="#" className="text-dental-title hover:text-white transition-colors duration-200">
+                <span className="text-2xl">📘</span>
+              </a>
+              <a href="#" className="text-dental-title hover:text-white transition-colors duration-200">
+                <span className="text-2xl">📷</span>
+              </a>
             </div>
-            <div className="text-center md:text-right">
-              <p className="text-blue-200">© 2025 Todos los derechos reservados.</p>
-              <button className="text-blue-200 hover:text-white transition-colors">Política de Privacidad</button>
+            <div className="mt-8 pt-6 border-t border-dental-subtitle">
+              <p className="text-dental-subtitle">&copy; 2024 Dra. Patricia Torres. Todos los derechos reservados.</p>
             </div>
           </div>
         </div>

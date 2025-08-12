@@ -1,107 +1,130 @@
-# Componentes de la Landing Page
+# Componentes del Proyecto
 
-Esta carpeta contiene todos los componentes reutilizables de la landing page de la Dra. Patricia Torres.
+Este directorio contiene todos los componentes reutilizables de la landing page de Dra. Patricia Torres.
 
-## 📁 Estructura de Carpetas
+## Estructura
 
 ```
 components/
-├── Header/           # Componente de navegación principal
-├── Hero/            # Sección hero principal
-├── Services/        # Sección de servicios (próximamente)
-├── About/           # Sección sobre mí (próximamente)
-├── Community/       # Sección de servicio comunitario (próximamente)
-├── Contact/         # Sección de contacto (próximamente)
-├── Footer/          # Pie de página (próximamente)
-└── index.js         # Exportaciones principales
+├── Header/           # Navegación principal
+├── Hero/            # Sección principal de bienvenida
+├── About/           # Secciones de contenido con imagen y texto
+├── Services/        # Sección de servicios (pendiente)
+├── Community/       # Sección de servicio comunitario (pendiente)
+├── Contact/         # Sección de contacto (pendiente)
+├── Footer/          # Pie de página (pendiente)
+├── index.js         # Exportaciones principales
+└── README.md        # Esta documentación
 ```
 
-## 🎯 Componentes Implementados
+## Componentes Implementados
 
-### Header
+### ✅ Header
 - **Archivo**: `Header/Header.jsx`
-- **Propósito**: Navegación principal con logo y menú móvil
-- **Características**:
-  - Logo con nombre de la Dra. Torres
-  - Navegación desktop y móvil
-  - Scroll suave a las secciones
-  - Menú hamburguesa para móviles
-  - Animaciones de transición
+- **Función**: Navegación principal con logo y menú responsive
+- **Características**: 
+  - Logo real de la práctica dental
+  - Menú de navegación con scroll suave
+  - Menú hamburguesa para mobile
+  - Colores personalizados del tema dental
 
-### Hero
+### ✅ Hero
 - **Archivo**: `Hero/Hero.jsx`
-- **Propósito**: Sección principal de presentación
+- **Función**: Sección principal de bienvenida
 - **Características**:
-  - Título principal y subtítulo
-  - Tagline de la práctica
-  - Botón de llamada a la acción
-  - Imagen placeholder con elementos decorativos
-  - Diseño responsivo
+  - Layout responsive con imagen y texto
+  - Diferentes comportamientos para mobile y desktop
+  - Botón de "Agendar Cita" prominente
+  - Imagen hero.png integrada
 
-## 🚀 Uso de los Componentes
+### ✅ About
+- **Archivo**: `About/About.jsx`
+- **Función**: Secciones de contenido reutilizables
+- **Características**:
+  - Componente flexible para múltiples secciones
+  - Posicionamiento configurable de imagen (izquierda/derecha)
+  - Colores y estilos personalizables
+  - Layout responsive automático
 
-### Importación
+## Componentes Pendientes
+
+### 🔄 Services
+- **Función**: Mostrar servicios dentales ofrecidos
+- **Estado**: Estructura básica en App.jsx
+
+### 🔄 Community
+- **Función**: Mostrar trabajo comunitario y social
+- **Estado**: Estructura básica en App.jsx
+
+### 🔄 Contact
+- **Función**: Información de contacto y formularios
+- **Estado**: Estructura básica en App.jsx
+
+### 🔄 Footer
+- **Función**: Pie de página con información adicional
+- **Estado**: Estructura básica en App.jsx
+
+## Uso
+
+### Importación Individual
 ```jsx
-import { Header, Hero } from './components';
+import Header from './components/Header';
+import Hero from './components/Hero';
+import About from './components/About';
 ```
 
-### Implementación
+### Importación Múltiple
 ```jsx
-function App() {
-  return (
-    <div>
-      <Header />
-      <Hero />
-      {/* Otros componentes */}
-    </div>
-  );
-}
+import { Header, Hero, About } from './components';
 ```
 
-## 🎨 Estilos y Clases CSS
+## Estilos
 
-### Clases Utilitarias Personalizadas
-- `.btn-primary`: Botón principal azul
-- `.btn-secondary`: Botón secundario gris
-- `.section-padding`: Padding estándar para secciones
-- `.container-custom`: Contenedor centrado con ancho máximo
+Todos los componentes utilizan:
+- **Tailwind CSS** para estilos
+- **Clases personalizadas** definidas en `src/index.css`
+- **Colores del tema dental** (dental-blue, dental-title, etc.)
+- **Fuente Inter** de Google Fonts
+- **Responsive design** con breakpoints de Tailwind
 
-### Animaciones Personalizadas
-- `.animate-fadeIn`: Fade in suave
-- `.animate-slideDown`: Slide down desde arriba
-- `.animate-bounce-in`: Bounce in con escala
+## Responsive
 
-## 🔧 Personalización
+Los componentes están diseñados para ser completamente responsive:
+- **Mobile First**: Diseño optimizado para dispositivos móviles
+- **Breakpoints**: Adaptación automática a tablet y desktop
+- **Touch Friendly**: Elementos interactivos optimizados para touch
 
-### Colores
-Los colores están definidos en `tailwind.config.js`:
-- `dental-blue`: #1e3a8a
-- `dental-purple`: #f3e8ff
-- `dental-pink`: #fdf2f8
+## Animaciones
 
-### Tipografía
-- Fuente principal: Inter (Google Fonts)
-- Pesos disponibles: 300, 400, 500, 600, 700
+Incluidas en `src/index.css`:
+- `animate-fadeIn`: Fade in suave
+- `animate-slideDown`: Slide down desde arriba
+- `animate-bounce-in`: Bounce con escala
+- `animate-float`: Flotación suave
 
-## 📱 Responsividad
+## Personalización
 
-Todos los componentes están diseñados para ser completamente responsivos:
-- **Móvil**: < 768px
-- **Tablet**: 768px - 1024px
-- **Desktop**: > 1024px
+Cada componente puede ser personalizado a través de:
+- **Props**: Para contenido dinámico
+- **Clases CSS**: Para estilos específicos
+- **Tailwind**: Para modificaciones rápidas
+- **CSS Custom Properties**: Para variables del tema
 
-## 🚧 Próximos Componentes
+## Próximos Pasos
 
-- [ ] Services: Sección de servicios dentales
-- [ ] About: Información personal de la Dra. Torres
-- [ ] Community: Servicio comunitario
-- [ ] Contact: Formulario de contacto y mapa
-- [ ] Footer: Pie de página con información legal
+1. **Implementar Services**: Crear componente para servicios dentales
+2. **Implementar Community**: Componente para trabajo comunitario
+3. **Implementar Contact**: Formularios y información de contacto
+4. **Implementar Footer**: Pie de página completo
+5. **Testing**: Agregar tests unitarios
+6. **Optimización**: Lazy loading y performance
 
-## 💡 Mejoras Futuras
+## Contribución
 
-- [ ] Integración con formularios reales
-- [ ] Lazy loading de imágenes
-- [ ] Animaciones de scroll
-- [ ] Integración con CMS
-- [ ] Optimización de SEO
+Para agregar nuevos componentes:
+1. Crear directorio con nombre descriptivo
+2. Implementar componente principal
+3. Crear archivo `index.js` para exportación
+4. Actualizar `components/index.js`
+5. Documentar en este README
+6. Agregar a `App.jsx` si es necesario
