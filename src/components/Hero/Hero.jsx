@@ -1,6 +1,11 @@
 import React from 'react';
+import { whatsappConfig } from '../../config/whatsapp';
 
 const Hero = () => {
+  const handleWhatsAppClick = () => {
+    whatsappConfig.openWhatsApp();
+  };
+
   return (
     <section className="bg-dental-blue text-white">
       <div className="container-custom py-0 px-8 pb-12 sm:pb-16 lg:pt-4 lg:pb-8">
@@ -21,8 +26,11 @@ const Hero = () => {
             </p>
             
             <div className="pt-4 lg:pt-6">
-              <button className="btn-hero font-inter-normal text-sm sm:text-base lg:text-lg px-5 sm:px-6 lg:px-8 py-2.5 sm:py-3 lg:py-4">
-                Agendar Cita
+              <button 
+                onClick={handleWhatsAppClick}
+                className="btn-hero font-inter-normal text-sm sm:text-base lg:text-lg px-5 sm:px-6 lg:px-8 py-2.5 sm:py-3 lg:py-4 flex items-center justify-center space-x-2 hover:scale-105 transition-transform duration-200"
+              >
+                <span>Agendar Cita</span>
               </button>
             </div>
           </div>
@@ -56,8 +64,11 @@ const Hero = () => {
           {/* Bottom Section - Button (Mobile Only) */}
           <div className="lg:hidden col-span-1 lg:col-span-2 order-2 lg:order-3 pt-2 lg:pt-0">
             <div className="flex justify-center lg:justify-start">
-              <button className="btn-hero font-inter-normal text-sm sm:text-base lg:text-lg w-full max-w-sm sm:max-w-md px-5 sm:px-6 lg:px-8 py-2.5 sm:py-3 lg:py-4">
-                Agendar Cita
+              <button 
+                onClick={handleWhatsAppClick}
+                className="btn-hero font-inter-normal text-sm sm:text-base lg:text-lg w-full max-w-sm sm:max-w-md px-5 sm:px-6 lg:px-8 py-2.5 sm:py-3 lg:py-4 flex items-center justify-center space-x-2 hover:scale-105 transition-transform duration-200"
+              >
+                <span>Agendar Cita</span>
               </button>
             </div>
           </div>

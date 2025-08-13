@@ -16,11 +16,11 @@ const About = ({
     <section className={`${backgroundColor} section-padding`}>
       <div className="container-custom">
         {/* Contenido en dos columnas */}
-        <div className="grid lg:grid-cols-2 gap-24 items-start">
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Columna de texto */}
-          <div className={`space-y-8 ${isImageLeft ? 'lg:order-2' : 'lg:order-1'}`}>
+          <div className={`space-y-6 ${isImageLeft ? 'lg:order-2' : 'lg:order-1'}`}>
             {/* Título alineado a la izquierda */}
-            <h2 className={`text-4xl lg:text-5xl font-bold text-left ${titleColor} font-inter-semibold`}>
+            <h2 className={`text-3xl lg:text-4xl font-bold text-left ${titleColor} font-inter-semibold mb-6`}>
               {title}
             </h2>
             
@@ -34,7 +34,7 @@ const About = ({
           
           {/* Columna de imagen */}
           <div className={`flex justify-center ${isImageLeft ? 'lg:justify-start lg:order-1' : 'lg:justify-end lg:order-2'}`}>
-            <div className="relative w-full max-w-lg lg:max-w-xl xl:max-w-2xl aspect-[3/4] overflow-hidden rounded-2xl shadow-2xl">
+            <div className="relative w-full max-w-sm lg:max-w-md xl:max-w-lg aspect-[5/5] overflow-hidden rounded-xl shadow-lg">
               <img 
                 src={imageSrc} 
                 alt={imageAlt}
