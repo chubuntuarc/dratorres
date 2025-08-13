@@ -1,11 +1,11 @@
-import { Header, Hero, About } from './components';
+import { Header, Hero, About, Testimonials } from './components';
 
 function App() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
       <Hero />
-      
+
       {/* Services Section */}
       <section id="servicios" className="bg-dental-purple section-padding">
         <div className="container-custom">
@@ -32,7 +32,7 @@ function App() {
       </section>
 
       {/* About Me Section */}
-      <About 
+      <About
         title="Sobre Mí"
         description={[
           "Con una trayectoria de más de 30 años, he consolidado mi pasión por la odontología, profesión que elegí y que me ha permitido mantenerme en aprendizaje constante.",
@@ -46,7 +46,7 @@ function App() {
       />
 
       {/* Community Service Section */}
-      <About 
+      <About
         title="Servicio a la Comunidad"
         description={[
           "Mi pasión por la odontología va más allá del consultorio.",
@@ -60,35 +60,11 @@ function App() {
         backgroundColor="bg-white"
       />
 
-      {/* Additional Content Section */}
-      <section className="bg-dental-purple section-padding">
-        <div className="container-custom">
-          <h2 className="text-4xl lg:text-5xl font-bold text-center text-gray-800 mb-12">Por Qué Elegirnos</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                <span className="text-4xl">🌟</span>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-3">Experiencia</h3>
-              <p className="text-gray-600">Más de 15 años de experiencia en odontología</p>
-            </div>
-            <div className="text-center">
-              <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                <span className="text-4xl">💙</span>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-3">Compromiso</h3>
-              <p className="text-gray-600">Comprometidos con la salud dental de nuestra comunidad</p>
-            </div>
-            <div className="text-center">
-              <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                <span className="text-4xl">🔬</span>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-3">Tecnología</h3>
-              <p className="text-gray-600">Equipamiento moderno y técnicas avanzadas</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Testimonials Section */}
+      <Testimonials
+        title="Pacientes Felices"
+        image="/images/dentista.png"
+      />
 
       {/* Contact Section */}
       <section id="contacto" className="bg-dental-purple section-padding">
