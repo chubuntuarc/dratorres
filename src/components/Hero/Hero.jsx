@@ -3,8 +3,8 @@ import React from 'react';
 const Hero = () => {
   return (
     <section className="bg-dental-blue text-white">
-      <div className="container-custom py-0 px-8 pb-12 sm:pb-16 lg:py-8">
-        <div className="grid lg:grid-cols-2 gap-0 lg:gap-12 items-center min-h-[500px] lg:min-h-[600px]">
+      <div className="container-custom py-0 px-8 pb-12 sm:pb-16 lg:pt-4 lg:pb-8">
+        <div className="grid lg:grid-cols-2 gap-0 lg:gap-12 items-center min-h-[500px] lg:min-h-[500px]">
           {/* Left Column - Text Content (Hidden on Mobile) */}
           <div className="hidden lg:block space-y-6 lg:space-y-8 text-left order-1 lg:order-1">
             <div className="space-y-2 lg:space-y-4">

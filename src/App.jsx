@@ -12,23 +12,14 @@ function App() {
           <h2 className="text-4xl lg:text-5xl font-bold text-center text-gray-800 mb-12">Servicios</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-2xl shadow-lg text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl">🦷</span>
-              </div>
               <h3 className="text-xl font-semibold text-gray-800 mb-3">Odontología General</h3>
               <p className="text-gray-600">Cuidado dental integral para toda la familia</p>
             </div>
             <div className="bg-white p-6 rounded-2xl shadow-lg text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl">✨</span>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-3">Estética Dental</h3>
-              <p className="text-gray-600">Transforma tu sonrisa con tratamientos modernos</p>
+              <h3 className="text-xl font-semibold text-gray-800 mb-3">Cirugía Dental</h3>
+              <p className="text-gray-600">Tratamientos de cirugía dental</p>
             </div>
             <div className="bg-white p-6 rounded-2xl shadow-lg text-center">
-              <div className="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl">🦷</span>
-              </div>
               <h3 className="text-xl font-semibold text-gray-800 mb-3">Ortodoncia</h3>
               <p className="text-gray-600">Alinea tus dientes de forma profesional</p>
             </div>
@@ -40,9 +31,9 @@ function App() {
       <About 
         title="Sobre Mí"
         description={[
-          "Lorem ipsum texto de ejemplo aqui solamente. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-          "Lorem ipsum texto de ejemplo aqui solamente. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-          "Lorem ipsum texto de ejemplo aqui solamente. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+          "Con una trayectoria de más de 30 años, he consolidado mi pasión por la odontología, profesión que elegí y que me ha permitido mantenerme en aprendizaje constante.",
+          "Soy egresada de la Facultad de Odontología de la Universidad Autónoma de Zacatecas y me comprometo a ofrecer una atención de excelencia.",
+          "Mi enfoque se centra en la actualización continua y en la aplicación de las técnicas más avanzadas para garantizar resultados de alta calidad."
         ]}
         imageSrc="/images/dentista.png"
         imageAlt="Dra. Patricia Torres - Cirujano Dentista"
@@ -54,9 +45,10 @@ function App() {
       <About 
         title="Servicio a la Comunidad"
         description={[
-          "Lorem ipsum texto de ejemplo aqui solamente. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-          "Lorem ipsum texto de ejemplo aqui solamente. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-          "Lorem ipsum texto de ejemplo aqui solamente. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+          "Mi pasión por la odontología va más allá del consultorio.",
+          "A lo largo de mi carrera, he tenido el privilegio de ser parte de brigadas médicas altruistas, una labor que me ha permitido llevar atención dental a las personas que más lo necesitan.",
+          "Estas experiencias, especialmente en zonas remotas como la Sierra de Chihuahua, me han enseñado que una sonrisa sana puede transformar vidas.",
+          "Este compromiso es una parte fundamental de mi misión profesional y personal."
         ]}
         imageSrc="/images/comunidad.png"
         imageAlt="Servicio a la comunidad dental"
