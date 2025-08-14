@@ -49,7 +49,7 @@ const Hero = () => {
               <div className="relative overflow-hidden rounded-2xl shadow-2xl bg-white">
                 {/* Real Dental Image */}
                 <img
-                  src="/images/hero.png"
+                  src="/images/doctora-torres.jpeg"
                   alt="Dra. Patricia Torres trabajando con un paciente en consulta dental"
                   className="w-full h-80 sm:h-96 md:h-[450px] lg:h-96 xl:h-[500px] object-cover object-center"
                 />
