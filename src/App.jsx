@@ -1,4 +1,4 @@
-import { Header, Hero, About, Testimonials } from './components';
+import { Header, Hero, About, Testimonials, Contact } from './components';
 
 function App() {
   return (
@@ -67,63 +67,27 @@ function App() {
       />
 
       {/* Contact Section */}
-      <section id="contacto" className="bg-dental-purple section-padding">
-        <div className="container-custom">
-          <h2 className="text-4xl lg:text-5xl font-bold text-center text-gray-800 mb-12">Contacto</h2>
-          <div className="max-w-2xl mx-auto">
-            <div className="bg-white p-8 rounded-2xl shadow-lg">
-              <div className="grid md:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="text-2xl font-semibold text-gray-800 mb-4">Información de Contacto</h3>
-                  <div className="space-y-3">
-                    <div className="flex items-center space-x-3">
-                      <span className="text-2xl">📍</span>
-                      <span className="text-gray-600">Av. Principal 123, Ciudad</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <span className="text-2xl">📞</span>
-                      <span className="text-gray-600">+1 234 567 8900</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <span className="text-2xl">✉️</span>
-                      <span className="text-gray-600">info@drapatriciatorres.com</span>
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <h3 className="text-2xl font-semibold text-gray-800 mb-4">Horarios</h3>
-                  <div className="space-y-2 text-gray-600">
-                    <p><strong>Lunes - Viernes:</strong> 9:00 AM - 6:00 PM</p>
-                    <p><strong>Sábados:</strong> 9:00 AM - 2:00 PM</p>
-                    <p><strong>Domingos:</strong> Cerrado</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Contact />
 
       {/* Footer */}
-      <footer className="bg-dental-blue text-white section-padding">
+      <footer className="bg-dental-blue text-white py-12">
         <div className="container-custom">
           <div className="text-center">
-            <h3 className="text-2xl font-bold mb-4">Dra. Patricia Torres</h3>
-            <p className="text-dental-subtitle mb-6">Transformando sonrisas, compartiendo alegría</p>
-            <div className="flex justify-center space-x-6">
-              <a href="#" className="text-dental-title hover:text-white transition-colors duration-200">
-                <span className="text-2xl">📱</span>
-              </a>
-              <a href="#" className="text-dental-title hover:text-white transition-colors duration-200">
-                <span className="text-2xl">📘</span>
-              </a>
-              <a href="#" className="text-dental-title hover:text-white transition-colors duration-200">
-                <span className="text-2xl">📷</span>
-              </a>
+            {/* Logo */}
+            <div className="flex justify-center mb-6">
+              <div className="w-48 h-24 flex items-center justify-center">
+                <img
+                  src="/images/logo-dentista-torres.png"
+                  alt="Logo Dra. Patricia Torres - Cirujano Dentista"
+                  className="w-full h-full object-contain"
+                />
+              </div>
             </div>
-            <div className="mt-8 pt-6 border-t border-dental-subtitle">
-              <p className="text-dental-subtitle">&copy; 2024 Dra. Patricia Torres. Todos los derechos reservados.</p>
-            </div>
+
+            {/* Copyright */}
+            <p className="text-dental-subtitle text-sm">
+              © 2025 Todos los derechos reservados. Política de Privacidad
+            </p>
           </div>
         </div>
       </footer>

@@ -13,7 +13,7 @@ const Header = () => {
 
   return (
     <header className="bg-dental-blue text-white">
-      <nav className="container-custom section-padding">
+      <nav className="container-custom py-4 px-6 sm:py-6 lg:py-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-3">

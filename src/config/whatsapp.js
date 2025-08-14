@@ -1,7 +1,7 @@
 // Configuración de WhatsApp para la Dra. Patricia Torres
 export const whatsappConfig = {
   // Número de WhatsApp (formato internacional)
-  phoneNumber: '+526641234567', // Cambiar por el número real de la Dra. Torres
+  phoneNumber: '+526141988652', // Cambiar por el número real de la Dra. Torres
   
   // Mensaje predefinido para agendar cita
   defaultMessage: 'Hola Dra. Patricia Torres, me gustaría agendar una cita dental. ¿Podría ayudarme?',
